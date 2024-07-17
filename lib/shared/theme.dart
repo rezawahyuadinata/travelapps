@@ -9,7 +9,7 @@ Color kWhiteColor = const Color(0xffFFFFFF);
 Color kGreyColor = const Color(0xff9698A9);
 Color kGreenColor = const Color(0xff0EC3AE);
 Color kRedColor = const Color(0xff0EC3AE);
-Color kBackgroundColor = const Color(0xffE5E5E5);
+Color kBackgroundColor = const Color(0xffFAFAFA);
 Color kInactiveColor = const Color(0xffDBD7EC);
 Color kActiveColor = const Color(0xff5C40CC);
 

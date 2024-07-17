@@ -12,7 +12,7 @@ class GettingStartedPage extends StatelessWidget {
           Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/bg.png'),
                 fit: BoxFit.fill,
@@ -30,7 +30,7 @@ class GettingStartedPage extends StatelessWidget {
                     fontWeight: semiBold,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   'Explore new world with us and let\nyourself get an amazing experiences',
                   style: whiteTextStyle.copyWith(
@@ -42,9 +42,11 @@ class GettingStartedPage extends StatelessWidget {
                 Container(
                   width: 250,
                   height: 55,
-                  margin: EdgeInsets.only(top: 50, bottom: 80),
+                  margin: const EdgeInsets.only(top: 50, bottom: 80),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/sign-up');
+                    },
                     style: TextButton.styleFrom(
                         backgroundColor: kPrimaryColor,
                         shape: RoundedRectangleBorder(

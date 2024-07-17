@@ -14,8 +14,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    // TODO: implement initState
-    Timer(Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 2), () {
       Navigator.pushNamed(context, '/get-started');
     });
     super.initState();
@@ -32,8 +31,8 @@ class _SplashPageState extends State<SplashPage> {
             Container(
               height: 100,
               width: 100,
-              margin: EdgeInsets.only(bottom: 50),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(bottom: 50),
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/plane_logo.png'),
                 ),

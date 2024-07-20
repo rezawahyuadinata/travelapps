@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelapps/shared/theme.dart';
+import 'package:travelapps/ui/widgets/custom_button.dart';
 
 class BonusPage extends StatelessWidget {
   const BonusPage({super.key});
@@ -73,13 +74,12 @@ class BonusPage extends StatelessWidget {
                 children: [
                   Text(
                     "Balance",
-                    style: whiteTextStyle.copyWith(
-                        fontSize: 16, fontWeight: medium),
+                    style: whiteTextStyle.copyWith(fontWeight: light),
                   ),
                   Text(
                     "RP. 20.000.00",
                     style: whiteTextStyle.copyWith(
-                        fontSize: 22, fontWeight: semiBold),
+                        fontSize: 26, fontWeight: semiBold),
                   ),
                 ],
               ),
@@ -106,27 +106,6 @@ class BonusPage extends StatelessWidget {
       );
     }
 
-    Widget buttonGetBonus() {
-      return Container(
-        width: 220,
-        height: 55,
-        margin: const EdgeInsets.only(top: 50),
-        child: TextButton(
-          onPressed: () {
-            Navigator.pushNamed(context, "/home");
-          },
-          style: TextButton.styleFrom(
-              backgroundColor: kPrimaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18))),
-          child: Text(
-            "Start Fly Now",
-            style: whiteTextStyle.copyWith(fontSize: 16, fontWeight: medium),
-          ),
-        ),
-      );
-    }
-
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: Center(
@@ -139,7 +118,11 @@ class BonusPage extends StatelessWidget {
                 type: "subjudul",
                 content:
                     "We give you early credit so that \nyou can buy a flight ticket"),
-            buttonGetBonus(),
+            const CustomButton(
+              textCaption: 'Start Fly Now',
+              url: '/main',
+              atas: 50,
+            ),
           ],
         ),
       ),

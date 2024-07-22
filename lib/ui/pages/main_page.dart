@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelapps/shared/theme.dart';
+import 'package:travelapps/ui/pages/home_page.dart';
 import 'package:travelapps/ui/widgets/custom_bottom_navigation.dart';
 
 class MainPage extends StatelessWidget {
@@ -42,9 +43,13 @@ class MainPage extends StatelessWidget {
       );
     }
 
+    Widget BuildContent() {
+      return const Homepage();
+    }
+
     return Scaffold(
         body: Stack(
-      children: [Text("Main Page"), customNavigationNavBar()],
+      children: [BuildContent(), customNavigationNavBar()],
     ));
   }
 }
